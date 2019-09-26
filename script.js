@@ -4,7 +4,7 @@ window.doItForTheMemes = function(){
   $( "a[href='/home'] > div > div > span").text("Garbage");
   $( "a[href='/explore'] > div > div > span").text("Harass");
   $( "a[href='/notifications'] > div > div > span").text("Get Harassed");
-  $( "a[href='/messages'] > div > div > span").text("The Boys");
+  $( "a[href^='/messages'] > div > div > span").text("The Boys");
 }
 
 window.onload = function () {
