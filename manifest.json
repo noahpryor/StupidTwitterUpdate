@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitter Update",
+  "description": "This is definitely a real, official Twitter update",
+  "version": "0.0.0.1",
+
+  "browser_action": {
+    "default_icon": "images/laugh_icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/laugh_icon.png",
+    "48": "images/laugh_icon.png",
+    "128":"images/laugh_icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitter.com/*", "http://*.twitter.com/*"],
+      "js": ["js/jquery-3.2.1.min.js", "script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
